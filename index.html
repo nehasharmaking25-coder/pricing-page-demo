@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Plans</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #fff;
+  }
+  .heading { text-align: center; margin-bottom: 50px; }
+  .heading h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; }
+  .heading p { color: #b8b5d4; margin-top: 12px; font-size: 1.15rem; }
+  .pricing { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; align-items: stretch; }
+  .card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 40px 32px;
+    width: 320px;
+    backdrop-filter: blur(12px);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-14px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+    border-color: rgba(255,255,255,0.35);
+  }
+  .card.popular {
+    border: 2px solid #7c5cff;
+    box-shadow: 0 0 40px rgba(124,92,255,0.35);
+  }
+  .badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #7c5cff, #a78bfa);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    text-transform: uppercase;
+  }
+  .plan-name { font-size: 1.3rem; font-weight: 700; color: #e0dcff; }
+  .price { font-size: 3rem; font-weight: 800; margin: 18px 0 4px; }
+  .price span { font-size: 1rem; font-weight: 400; color: #b8b5d4; }
+  .desc { color: #b8b5d4; font-size: 0.95rem; margin-bottom: 24px; }
+  .features { list-style: none; flex: 1; margin-bottom: 28px; }
+  .features li { padding: 9px 0; color: #d8d5f0; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .features li::before { content: "✓ "; color: #7c5cff; font-weight: 700; }
+  .btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .btn:hover { transform: scale(1.04); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+  .btn.primary { background: linear-gradient(90deg, #7c5cff, #a78bfa); border: none; }
+</style>
+</head>
+<body>
+  <div class="heading">
+    <h1>Simple, transparent pricing</h1>
+    <p>Choose the plan that fits your team. Upgrade anytime.</p>
+  </div>
+  <div class="pricing">
+    <div class="card">
+      <div class="plan-name">Basic</div>
+      <div class="price">$9<span>/mo</span></div>
+      <p class="desc">Perfect for individuals getting started.</p>
+      <ul class="features">
+        <li>1 project</li>
+        <li>5 GB storage</li>
+        <li>Community support</li>
+        <li>Basic analytics</li>
+      </ul>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+    <div class="card popular">
+      <div class="badge">Most Popular</div>
+      <div class="plan-name">Pro</div>
+      <div class="price">$29<span>/mo</span></div>
+      <p class="desc">For growing teams that need more power.</p>
+      <ul class="features">
+        <li>Unlimited projects</li>
+        <li>100 GB storage</li>
+        <li>Priority support</li>
+        <li>Advanced analytics</li>
+        <li>Custom domains</li>
+      </ul>
+      <a href="#" class="btn primary">Start Free Trial</a>
+    </div>
+    <div class="card">
+      <div class="plan-name">Enterprise</div>
+      <div class="price">$99<span>/mo</span></div>
+      <p class="desc">Advanced security and dedicated support.</p>
+      <ul class="features">
+        <li>Unlimited everything</li>
+        <li>1 TB storage</li>
+        <li>Dedicated manager</li>
+        <li>SSO &amp; audit logs</li>
+        <li>99.99% uptime SLA</li>
+      </ul>
+      <a href="#" class="btn">Contact Sales</a>
+    </div>
+  </div>
+</body>
+</html>
